@@ -1,0 +1,27 @@
+<div ng-controller="LimitedCtrl as vm">
+    <h1> Input based expense despence for Limited coins...!! </h1>
+    <form novalidate class="css-form" name="dispenseForm">
+      <label>Name: <input type="text" ng-model="vm.amount" only-digits/></label><br />
+      <p ng-show="!vm.amount">Please enter some amount..</p>
+      <input type="submit" class="btn btn-primary" ng-click="vm.update(vm.amount)" value="GO!!" />
+      <input type="submit" class="btn btn-default" ng-click="vm.clear()" value="CLEAR!!" />
+      <br />
+        Ones: <span></span><br/>
+        Twos: <span></span><br/>
+        Fives: <span></span><br/>
+        Tens: <span></span><br/>
+        Twenties: <span></span><br/>
+        Fifties: <span></span><br/>
+        Hundreds: <span></span><br/>
+        <br />
+        <ul>
+            <li>Notes of 1 left are 10</li>
+            <li>Notes of 2 left are 10</li>
+            <li>Notes of 5 left are 10</li>
+            <li>Notes of 10 left are 10</li>
+            <li>Notes of 20 left are 10</li>
+            <li>Notes of 50 left are 10</li>
+            <li>Notes of 100 left are 10</li>
+        </ul>
+    </form>
+</div>
